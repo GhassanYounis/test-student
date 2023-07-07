@@ -60,7 +60,7 @@ const Student = () => {
 
     async function update(event) {
         event.preventDefault();
-        if (!student.id) return alert("Student Details No Found");
+        if (!student.id) return alert("Student Details Not Found");
         await axios.put("http://localhost:8080/api/students/update", student);
         setData(prevData => {
             return prevData.map(item => {
