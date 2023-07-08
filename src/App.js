@@ -89,7 +89,7 @@ export default function App() {
     const [selectedItem, setSelectedItem] = useState(1);
 
     const routes = useRoutes([
-        {path: '/', element: <HomePage/>},
+        // {path: '/', element: <HomePage/>},
         {path: '/about', element: <AboutPage/>},
         {path: '/students/student/:id', element: <Student/>},
         {path: '/students/all', element: <StudentList/>},
@@ -117,6 +117,7 @@ export default function App() {
 
                     <main className="main-content">
                         <Routes>
+                            <Route exact path={`/`} render={ (routerProps) => < Home routerProps={routerProps} setUpGame={this.setUpGame} />} />
                             {routes}
                         </Routes>
                     </main>
